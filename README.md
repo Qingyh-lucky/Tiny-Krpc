@@ -43,7 +43,8 @@
 
 ### 客户端运行结果
 
-<img src="./img/client.png">
+<!-- <img src="./img/client.png"> -->
+![alt text](img/client.png)
 
 - **运行结果说明**：该图展示了客户端成功连接到服务器并发送请求的状态。
 
@@ -70,7 +71,8 @@
 ### 最终运行结果
 
 通过运行 `bin` 目录下的 `server` 和 `client` 可执行程序，最终结果如下：
-<img src="./img/server-client.png">
+<!-- <img src="./img/server-client.png"> -->
+![alt text](./img/server-client.png)
 
 - **最终结果说明**：该结果表明客户端与服务端成功完成了一次 RPC 通信，包括服务调用、请求处理和结果返回，验证了框架的稳定性和功能性。
 ## 负载均衡
