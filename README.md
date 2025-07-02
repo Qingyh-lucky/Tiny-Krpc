@@ -110,8 +110,8 @@ locate zkCli.sh #定位zkCli.sh所在位置
 cd /usr/share/zookeeper/bin #进入zkCli.sh对应文件夹
 ./zkCli.sh -server 127.0.0.1:2181 #连接zookeeper
 ```
-<img src="./img/zookeeper_node.png">
-
+<!-- <img src="./img/zookeeper_node.png"> -->
+![image](img/zookeeper_node.png)
 
 
 
