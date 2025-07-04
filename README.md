@@ -44,7 +44,8 @@
 ### 客户端运行结果
 
 <!-- <img src="./img/client.png"> -->
-![alt text](img/client.png)
+![image](https://github.com/user-attachments/assets/3bc8ef94-4e77-45f7-9537-9de77e20824a)
+
 
 - **运行结果说明**：该图展示了客户端成功连接到服务器并发送请求的状态。
 
