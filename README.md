@@ -25,7 +25,8 @@
 
 ### 服务端运行结果
 
-<img src="./img/server.png">
+![image](https://github.com/user-attachments/assets/a7cc81c7-5223-407d-af13-73f6e78e32d7)
+
 
 - **运行结果说明**：该图展示了服务器成功启动并监听客户端请求的状态。
 
@@ -43,8 +44,8 @@
 
 ### 客户端运行结果
 
-<!-- <img src="./img/client.png"> -->
-![image](https://github.com/user-attachments/assets/3bc8ef94-4e77-45f7-9537-9de77e20824a)
+![image](https://github.com/user-attachments/assets/23f02ed8-4862-4e98-8e12-f91534abf938)
+
 
 
 - **运行结果说明**：该图展示了客户端成功连接到服务器并发送请求的状态。
@@ -73,7 +74,8 @@
 
 通过运行 `bin` 目录下的 `server` 和 `client` 可执行程序，最终结果如下：
 <!-- <img src="./img/server-client.png"> -->
-![alt text](./img/server-client.png)
+![image](https://github.com/user-attachments/assets/f1f9da75-4f61-45d1-be4e-9471a44b7bbd)
+
 
 - **最终结果说明**：该结果表明客户端与服务端成功完成了一次 RPC 通信，包括服务调用、请求处理和结果返回，验证了框架的稳定性和功能性。
 ## 负载均衡
@@ -82,18 +84,21 @@
 **服务器2**：127.0.0.1:9000:
 **服务器3**：127.0.0.1:10000:
 随后通过客户端发起了200次请求，每台服务器均衡的处理了来自客户端的`200`次请求，平均为`66`次
-<img src="./img/loadBalance.png">
+![image](https://github.com/user-attachments/assets/dc5209a0-666e-41b7-bc8d-d4123188b04f)
+
 
 
 ## 熔断机制 
 ## 服务器1模拟出错
 此时模拟服务器1 出错，我这里设置的熔断阈值是5次，当探测超过5次就失败,此时服务器2，服务器3都正确。
-<img src="./img/server1_error.png">
+![image](https://github.com/user-attachments/assets/01ee85ae-4b12-4376-8274-f4f7038230d1)
+
 此时通过5次探测发现服务器1失败，开启服务器1的熔断，并将后续请求均匀的负载到服务器2和服务器3上去。
 
 ## 服务器1模拟出错且服务器2模拟超时
 此时模拟服务器1 出错，服务器2 模拟超时（设置的是超时5秒就返回错误了），当探测超过5次就失败,此时服务器3正常工作。
-<img src="./img/server1&&2_error.png">
+![image](https://github.com/user-attachments/assets/78082a88-69b7-4762-a1e2-67d0fe6ce470)
+
 此时通过5次探测发现服务器1失败，开启服务器1的熔断；
 此时通过5次探测发现服务器2超时，开启服务器2的熔断；
 并将后续请求将负载到服务器3上去。
@@ -101,7 +106,8 @@
 
 # 探活机制
 模拟服务器1在前半段工作错误，后半段时间正常工作（但实际服务是空服务，执行比较快。）
-<img src="./img/recover_error.png">
+![image](https://github.com/user-attachments/assets/ebf92502-e9af-4e7d-8660-35ea5abc65ad)
+
 
 ## Zookeeper查看
 查看zookeeper节点连接情况
@@ -114,7 +120,7 @@ cd /usr/share/zookeeper/bin #进入zkCli.sh对应文件夹
 ./zkCli.sh -server 127.0.0.1:2181 #连接zookeeper
 ```
 <!-- <img src="./img/zookeeper_node.png"> -->
-![image](img/zookeeper_node.png)
+![image](https://github.com/user-attachments/assets/d2fe446c-30db-40ac-ad79-12974c8531b8)
 
 
 
